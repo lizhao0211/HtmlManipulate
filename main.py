@@ -74,7 +74,7 @@ body{font-family:PingFang SC,-apple-system,BlinkMacSystemFont,Roboto,Helvetica N
 '''     # 定义一个变量，用来保存从gbhome获得的网页html文件
 
 soup = BeautifulSoup(html, 'lxml')    # soup 用lxml框架
-txt = soup.prettify().replace("\xa9","")   # txt为格式化之后的内容，并且删除\xo9 字符，否则报错
+txt = soup.prettify().replace("\xa9","")   # txt为格式化之后的内容，并且删除\xa9 字符，否则报错
 with open(file_path,'w') as file_object:
     file_object.write(txt)      # 写入文件
 # print(soup.prettify())
